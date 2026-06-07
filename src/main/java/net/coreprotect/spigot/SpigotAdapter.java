@@ -13,7 +13,7 @@ import net.coreprotect.utility.Util;
 
 public class SpigotAdapter implements SpigotInterface {
 
-    public static SpigotInterface ADAPTER = new SpigotAdapter();
+    public static SpigotInterface ADAPTER;
     public static final int SPIGOT_UNAVAILABLE = 0;
     public static final int SPIGOT_V1_13 = BukkitAdapter.BUKKIT_V1_13;
     public static final int SPIGOT_V1_14 = BukkitAdapter.BUKKIT_V1_14;
@@ -47,7 +47,7 @@ public class SpigotAdapter implements SpigotInterface {
             case SPIGOT_V1_21:
             case SPIGOT_V26_0:
             default:
-                SpigotAdapter.ADAPTER = new SpigotHandler();
+                // SpigotAdapter.ADAPTER = new SpigotHandler();
                 break;
         }
     }
