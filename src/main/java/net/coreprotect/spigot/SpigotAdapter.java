@@ -32,24 +32,7 @@ public class SpigotAdapter implements SpigotInterface {
             spigotVersion = SPIGOT_UNAVAILABLE;
         }
 
-        switch (spigotVersion) {
-            case SPIGOT_UNAVAILABLE:
-                SpigotAdapter.ADAPTER = new SpigotAdapter();
-                break;
-            case SPIGOT_V1_13:
-            case SPIGOT_V1_14:
-            case SPIGOT_V1_15:
-            case SPIGOT_V1_16:
-            case SPIGOT_V1_17:
-            case SPIGOT_V1_18:
-            case SPIGOT_V1_19:
-            case SPIGOT_V1_20:
-            case SPIGOT_V1_21:
-            case SPIGOT_V26_0:
-            default:
-                // SpigotAdapter.ADAPTER = new SpigotHandler();
-                break;
-        }
+        SpigotAdapter.ADAPTER = new SpigotHandler();
     }
 
     @Override
