@@ -39,32 +39,7 @@ public class PaperAdapter implements PaperInterface {
             paperVersion = PAPER_UNAVAILABLE;
         }
 
-        switch (paperVersion) {
-            case PAPER_UNAVAILABLE:
-                PaperAdapter.ADAPTER = new PaperAdapter();
-                break;
-            case PAPER_V1_13:
-            case PAPER_V1_14:
-            case PAPER_V1_15:
-            case PAPER_V1_16:
-                PaperAdapter.ADAPTER = new PaperHandler();
-                break;
-            case PAPER_V1_17:
-            case PAPER_V1_18:
-            case PAPER_V1_19:
-                PaperAdapter.ADAPTER = new Paper_v1_17();
-                break;
-            case PAPER_V1_20:
-                PaperAdapter.ADAPTER = new Paper_v1_20();
-                break;
-            case PAPER_V1_21:
-                PaperAdapter.ADAPTER = new Paper_v1_20();
-                break;
-            case PAPER_V26_0:
-            default:
-                PaperAdapter.ADAPTER = new Paper_26_0();
-                break;
-        }
+        PaperAdapter.ADAPTER = new Paper_26_0();
     }
 
     @Override
